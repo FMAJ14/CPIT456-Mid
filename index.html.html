@@ -1,0 +1,662 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>456 Midterm Study Guide</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one reading column with a sticky topic bar; highlighter-yellow marks what the revision sheet names. */
+:root{
+  --bg:#f6f7f9; --surface:#ffffff; --ink:#18212e; --muted:#5a6575; --line:#dde2ea;
+  --accent:#1f4fa3; --accent-soft:#e7eefb; --mark:#fff1a6; --mark-ink:#5b4a00;
+  --good:#1d7a4c; --warn:#a4580c; --warn-soft:#fdf0e1; --code-bg:#eef1f6;
+  --f-display:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-body:"Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#10151d; --surface:#171e29; --ink:#e3e8ef; --muted:#9aa5b5; --line:#2a3443;
+  --accent:#8db4ff; --accent-soft:#1c2a42; --mark:#5c4f12; --mark-ink:#ffe98a;
+  --good:#5cc993; --warn:#f0a35a; --warn-soft:#33240f; --code-bg:#1d2533; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#10151d; --surface:#171e29; --ink:#e3e8ef; --muted:#9aa5b5; --line:#2a3443;
+  --accent:#8db4ff; --accent-soft:#1c2a42; --mark:#5c4f12; --mark-ink:#ffe98a;
+  --good:#5cc993; --warn:#f0a35a; --warn-soft:#33240f; --code-bg:#1d2533; color-scheme:dark}
+
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+.wrap{max-width:820px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.top{padding-block:40px 24px}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:clamp(30px,6vw,44px);font-weight:800;letter-spacing:-.01em;margin-top:6px}
+h2{font-size:26px;font-weight:800}
+h3{font-size:18px;font-weight:700;margin-top:22px}
+p{margin:10px 0}
+.lede{color:var(--muted);max-width:62ch}
+mark{background:var(--mark);color:var(--mark-ink);padding:0 .2em;border-radius:2px}
+
+nav.topics{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+nav.topics .wrap{display:flex;gap:6px;overflow-x:auto;padding-block:10px;scrollbar-width:thin}
+nav.topics a{flex:none;font-size:14px;font-weight:600;color:var(--ink);text-decoration:none;padding:5px 11px;border:1px solid var(--line);border-radius:999px;white-space:nowrap}
+nav.topics a:hover,nav.topics a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+
+section{padding-block:34px;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+.sec-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px}
+.src{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+ul,ol{padding-left:22px;margin:8px 0}
+li{margin:3px 0}
+li::marker{color:var(--muted)}
+strong{font-weight:700}
+a{color:var(--accent)}
+
+.checklist{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:6px 18px;list-style:none;padding:0;margin:16px 0 0}
+.checklist li{margin:0}
+.checklist a{display:flex;gap:8px;align-items:baseline;color:var(--ink);text-decoration:none;font-weight:600;padding:4px 0}
+.checklist a:hover{color:var(--accent)}
+.checklist .n{font-family:var(--f-mono);font-size:12px;color:var(--muted);min-width:20px}
+
+.formula{font-family:var(--f-mono);font-size:15px;background:var(--code-bg);border-left:3px solid var(--accent);padding:10px 14px;margin:12px 0;overflow-x:auto;white-space:pre;line-height:1.7}
+.note{background:var(--warn-soft);border-left:3px solid var(--warn);padding:10px 14px;margin:14px 0;font-size:15.5px}
+.note b{color:var(--warn)}
+.tbl{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;width:100%;font-size:15px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--f-display);font-weight:700;font-size:13.5px;color:var(--muted);border-bottom:2px solid var(--line)}
+td.num,th.num{text-align:right;font-family:var(--f-mono);font-size:14px}
+
+details.prob{background:var(--surface);border:1px solid var(--line);border-radius:6px;margin:12px 0}
+details.prob>summary{cursor:pointer;list-style:none;padding:12px 14px}
+details.prob>summary::-webkit-details-marker{display:none}
+details.prob>summary .q{display:block}
+details.prob>summary .reveal{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:var(--accent);font-family:var(--f-display)}
+details.prob[open]>summary .reveal{display:none}
+details.prob>summary:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;border-radius:6px}
+details.prob .sol{border-top:1px dashed var(--line);padding:4px 14px 12px}
+.tag{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-right:6px}
+.ans{font-weight:700;color:var(--good)}
+
+.calc{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px;margin:16px 0}
+.calc h3{margin-top:0}
+.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:12px 0}
+.fields label{display:flex;flex-direction:column;gap:4px;font-size:13.5px;font-weight:600;color:var(--muted)}
+input,select{font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:7px 9px;min-width:0}
+input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.out{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.out div{background:var(--accent-soft);border-radius:4px;padding:8px 10px}
+.out small{display:block;font-size:12px;color:var(--muted);font-weight:600}
+.out b{font-family:var(--f-mono);font-size:17px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px}
+@media (max-width:620px){.two{grid-template-columns:1fr}}
+.two>div{min-width:0}
+footer{padding-block:30px 50px;color:var(--muted);font-size:14px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+</style>
+
+<header class="top wrap">
+  <div class="eyebrow">Course 456 · Midterm · October 2026</div>
+  <h1>456 Midterm Study Guide</h1>
+  <p class="lede">Built from your lecture files and checked against the professor's revision sheet. Everything the sheet names is here in the same order, with formulas, worked problems you can try first, and two calculators. <mark>Highlighted</mark> items are the calculations the sheet says will be asked.</p>
+</header>
+
+<nav class="topics" aria-label="Topics"><div class="wrap">
+  <a href="#past">Past exam</a><a href="#calc">Effort &amp; cost</a><a href="#pm">Why PM</a><a href="#sdlc">SDLC</a><a href="#loc">LOC</a><a href="#fp">FP analysis</a><a href="#est">Estimation</a><a href="#cocomo">COCOMO I &amp; II</a><a href="#dre">DRE</a><a href="#cmp">FP vs LOC</a><a href="#scope">Scope</a><a href="#extra">Also in files</a>
+</div></nav>
+
+<main class="wrap">
+
+<section id="sheet">
+  <div class="sec-head"><h2>What the revision sheet lists</h2><span class="src">Revision: 456-Midterm Exam, October 2026</span></div>
+  <p>The sheet says "All of the above should be prepared." Each item below links to its section.</p>
+  <ul class="checklist">
+    <li><a href="#pm"><span class="n">1</span>Why project management is important</a></li>
+    <li><a href="#sdlc"><span class="n">2</span>SDLC</a></li>
+    <li><a href="#loc"><span class="n">3</span>Lines of Code (LOC)</a></li>
+    <li><a href="#fp"><span class="n">4</span>Function Point (FP) analysis</a></li>
+    <li><a href="#est"><span class="n">5</span>Cost estimation</a></li>
+    <li><a href="#est"><span class="n">6</span>Software estimation</a></li>
+    <li><a href="#cocomo"><span class="n">7</span>COCOMO I calculation</a></li>
+    <li><a href="#calc"><span class="n">8</span>LOC-based estimation</a></li>
+    <li><a href="#calc"><span class="n">9</span>FP-based estimation</a></li>
+    <li><a href="#dre"><span class="n">10</span>Defect Removal Efficiency</a></li>
+    <li><a href="#cocomo-cmp"><span class="n">11</span>COCOMO I vs COCOMO II</a></li>
+    <li><a href="#cmp"><span class="n">12</span>FP vs LOC</a></li>
+    <li><a href="#scope"><span class="n">13</span>Scope, software scope</a></li>
+  </ul>
+  <div class="note"><b>COCOMO I is confirmed:</b> your lecture files don't cover COCOMO I, but the previous exam does, and it uses the same constants as this guide (organic 2.4/1.05/2.5/0.38, semi-detached 3.0/1.12/2.5/0.35, embedded 3.6/1.20/2.5/0.32). Learn the table; the exam gives it to you, but knowing it saves time.</div>
+</section>
+
+<section id="past">
+  <div class="sec-head"><h2>Previous midterm, with the official answers</h2><span class="src">Past 456 midterm (answer key highlighted in the original)</span></div>
+  <p>This is the best preview of tomorrow. It has <strong>30 marks in four parts</strong>, and almost every question maps onto a topic on the revision sheet.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Part</th><th>Type</th><th class="num">Marks</th><th>Topics tested</th></tr></thead>
+    <tbody>
+      <tr><td>Q1</td><td>8 × True/False</td><td class="num">4</td><td>COCOMO stages, estimation, empirical models</td></tr>
+      <tr><td>Q2</td><td>14 × MCQ</td><td class="num">7</td><td>SDLC phases, estimation techniques, FP</td></tr>
+      <tr><td>Q3</td><td>Short answers</td><td class="num">12</td><td>Scope, understanding scope, COCOMO types and models, COCOMO I vs II</td></tr>
+      <tr><td>Q4</td><td>Calculations</td><td class="num">7</td><td>LOC-based effort and cost (3), Basic COCOMO (4)</td></tr>
+    </tbody></table></div>
+  <p>Q3 and Q4 together are 19 of the 30 marks, and they are almost word for word from this guide's <a href="#scope">Scope</a>, <a href="#cocomo">COCOMO</a> and <a href="#calc">effort and cost</a> sections. Learn those first.</p>
+
+  <h3>Q1: True or False (4 marks)</h3>
+  <details class="prob"><summary><span class="q"><span class="tag">1</span>The post-architecture-stage model in the COCOMO family assumes that requirements are stable and the basic architecture of the software can be established after detailed design and coding.</span><span class="reveal">Show answer</span></summary>
+    <div class="sol"><p><span class="ans">False.</span> "Requirements are stable and the basic architecture is established" describes the <em>early design stage</em> model. The post-architecture model is used <em>during construction</em> of the software.</p></div></details>
+  <details class="prob"><summary><span class="q"><span class="tag">2</span>One of the primary responsibilities of a project manager is to ensure that adequate resources are available and managed effectively to complete the project successfully.</span><span class="reveal">Show answer</span></summary>
+    <div class="sol"><p><span class="ans">True.</span></p></div></details>
+  <details class="prob"><summary><span class="q"><span class="tag">3</span>Activity cost estimates are quantitative assessments, not qualitative. They provide specific cost estimates for each activity or work package in the project.</span><span class="reveal">Show answer</span></summary>
+    <div class="sol"><p><span class="ans">True.</span> They are numbers (costs) for each activity.</p></div></details>
+  <details class="prob"><summary><span class="q"><span class="tag">4</span>LOC-based estimation techniques decompose the problem into software functions to estimate the required size and effort.</span><span class="reveal">Show answer</span></summary>
+    <div class="sol"><p><span class="ans">True.</span> LOC estimation breaks the problem into <strong>software functions</strong> and estimates LOC for each. Compare MCQ 14: FP estimation decomposes by <strong>information domain values</strong>. This pair is easy to mix up.</p></div></details>
+  <details class="prob"><summary><span class="q"><span class="tag">5</span>Empirical estimation models use future project data and regression analysis to derive estimation parameters and coefficients.</span><span class="reveal">Show answer</span></summary>
+    <div class="sol"><p><span class="ans">False.</span> They use <strong>historical (past)</strong> project data, not future data. The word "future" is the trap.</p></div></details>
+  <details class="prob"><summary><span class="q"><span class="tag">6</span>When deciding the type of software project, factors such as technical complexity, budget, and project goals are considered. The schedule to complete is more related to project planning rather than project type determination.</span><span class="reveal">Show answer</span></summary>
+    <div class="sol"><p><span class="ans">True.</span> This matches MCQ 13: the schedule is <em>not</em> needed to decide the project type.</p></div></details>
+  <details class="prob"><summary><span class="q"><span class="tag">7</span>The effort is determined as a function of program estimate, and a set of cost drivers is given for every phase of the software lifecycle.</span><span class="reveal">Show answer</span></summary>
+    <div class="sol"><p><span class="ans">True.</span> This is the definition of <strong>Detailed COCOMO</strong>: cost drivers applied to each phase.</p></div></details>
+  <details class="prob"><summary><span class="q"><span class="tag">8</span>Empirical estimation models are typically based on trial-and-error determination of the parameters and coefficients.</span><span class="reveal">Show answer</span></summary>
+    <div class="sol"><p><span class="ans">False.</span> The parameters come from statistical analysis (regression) of historical data, not trial and error.</p></div></details>
+
+  <h3>Q2: Multiple choice (7 marks, ½ mark each)</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>#</th><th>Question</th><th>Answer</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Which SDLC phase gathers and analyzes requirements from stakeholders?</td><td>d) Requirement Analysis</td></tr>
+      <tr><td>2</td><td>Primary goal of the Testing phase?</td><td>b) Ensure the software meets the specified requirements</td></tr>
+      <tr><td>3</td><td>Which phase creates detailed specifications for the system?</td><td>b) Design</td></tr>
+      <tr><td>4</td><td>Purpose of the Maintenance phase?</td><td>a) Fix bugs and make enhancements</td></tr>
+      <tr><td>5</td><td>Primary goal of software project estimation?</td><td>b) Plan and manage project resources effectively</td></tr>
+      <tr><td>6</td><td>Which is NOT a common software estimation technique?</td><td>d) Benchmarking</td></tr>
+      <tr><td>7</td><td>What is a "Function Point"?</td><td>b) A unit of software functionality</td></tr>
+      <tr><td>8</td><td>What is a Work Breakdown Structure (WBS)?</td><td>b) A hierarchical decomposition of the total scope of work</td></tr>
+      <tr><td>9</td><td>Which technique relies on statistical data to predict outcomes?</td><td>b) Parametric Estimation</td></tr>
+      <tr><td>10</td><td>Advantage of analogy-based estimation?</td><td>b) It uses real historical data from similar projects</td></tr>
+      <tr><td>11</td><td>Cost of quality is a tool and technique within which process?</td><td>b) Estimate cost</td></tr>
+      <tr><td>12</td><td>The purpose of cost estimating is to…</td><td>b) Assist in setting the price for the project</td></tr>
+      <tr><td>13</td><td>Which one is NOT required to decide the type of software project?</td><td>a) Schedule to complete</td></tr>
+      <tr><td>14</td><td>FP-based estimation requires problem decomposition based on…</td><td>a) Information domain values</td></tr>
+    </tbody></table></div>
+  <div class="note"><b>Terms in the exam that aren't in your files:</b> learn these one-liners.
+    <ul style="margin-bottom:0">
+      <li><strong>Expert judgment:</strong> estimates from experienced people.</li>
+      <li><strong>Analogy-based:</strong> compare with real historical data from similar past projects.</li>
+      <li><strong>Parametric:</strong> statistical formulas from historical data (for example COCOMO, FP × productivity).</li>
+      <li><strong>Delphi technique:</strong> several experts estimate anonymously in rounds until they agree.</li>
+      <li><strong>WBS (Work Breakdown Structure):</strong> a hierarchical decomposition of the total scope of work.</li>
+      <li><strong>Cost of quality:</strong> a tool used in the <em>Estimate Costs</em> process.</li>
+    </ul></div>
+
+  <h3>Q3: Comprehension (12 marks)</h3>
+  <details class="prob"><summary><span class="q"><span class="tag">A · 2 marks</span>What is scope?</span><span class="reveal">Show model answer</span></summary>
+    <div class="sol"><p>Software scope describes the <strong>functions and features</strong> to be delivered to end users; the <strong>data</strong> that are input and output; the <strong>"content"</strong> presented to users as a consequence of using the software; and the <strong>performance, constraints, interfaces and reliability</strong> that bound the system.</p></div></details>
+  <details class="prob"><summary><span class="q"><span class="tag">B · 2.5 marks</span>Give the 5 points of understanding scope.</span><span class="reveal">Show model answer</span></summary>
+    <div class="sol"><ol><li>Understand the customer's needs</li><li>Understand the business context</li><li>Understand the project boundaries</li><li>Understand the customer's motivation</li><li>Understand the likely paths for change</li></ol></div></details>
+  <details class="prob"><summary><span class="q"><span class="tag">C · 1.5 marks</span>In COCOMO, projects are categorized into three types. Name and describe them.</span><span class="reveal">Show model answer</span></summary>
+    <div class="sol"><ol><li><strong>Organic:</strong> simple, well-understood systems developed by small teams with prior experience in similar projects.</li><li><strong>Semidetached:</strong> moderately complex systems where team experience and requirements fall between organic and embedded.</li><li><strong>Embedded:</strong> highly complex systems operating under strict constraints (hardware, software or regulations).</li></ol></div></details>
+  <details class="prob"><summary><span class="q"><span class="tag">D · 3 marks</span>According to Boehm, cost estimation is done through three stages. Briefly explain the Basic, Intermediate and Detailed models.</span><span class="reveal">Show model answer</span></summary>
+    <div class="sol"><ol><li><strong>Basic:</strong> estimates effort and cost mainly as a function of program size. <span style="font-family:var(--f-mono)">E = a × (KLOC)<sup>b</sup></span></li><li><strong>Intermediate:</strong> size plus cost drivers (product, hardware, personnel and project attributes). <span style="font-family:var(--f-mono)">E = a × (KLOC)<sup>b</sup> × EAF</span>, where EAF = Effort Adjustment Factor.</li><li><strong>Detailed:</strong> extends Intermediate by applying the cost drivers to <em>each phase</em> of the lifecycle (requirements, design, coding/testing, integration/testing).</li></ol></div></details>
+  <details class="prob"><summary><span class="q"><span class="tag">E · 3 marks</span>Give only three key differences between COCOMO 1 and COCOMO 2.</span><span class="reveal">Show model answer</span></summary>
+    <div class="sol"><div class="tbl"><table><thead><tr><th>COCOMO I</th><th>COCOMO II</th></tr></thead><tbody>
+      <tr><td>Useful for <strong>waterfall</strong> (sequential) development</td><td>Useful for <strong>non-sequential, rapid development and reuse</strong> models</td></tr>
+      <tr><td>Provides estimates of effort and schedule</td><td>Provides estimates that represent <strong>one standard deviation</strong> around the most likely estimate</td></tr>
+      <tr><td>Based on a <strong>linear</strong> reuse formula</td><td>Based on a <strong>non-linear</strong> reuse formula</td></tr>
+    </tbody></table></div><p>These are the three the professor used, so learn them first. The longer comparison table in the <a href="#cocomo-cmp">COCOMO section</a> gives you more if a question asks for extra differences.</p></div></details>
+
+  <h3>Q4: Calculations (7 marks)</h3>
+  <details class="prob"><summary><span class="q"><span class="tag">Ex 1 · 3 marks</span>LOC = 33,200; productivity = 620 LOC/pm; burdened labour rate = $8,000/pm. Find effort, cost per LOC and total project cost.</span><span class="reveal">Show solution</span></summary>
+    <div class="sol"><div class="formula">Effort      = LOC ÷ Productivity     = 33,200 ÷ 620 = 53.55 person-months
+Cost per LOC = Labour rate ÷ Productivity = 8,000 ÷ 620 = $12.90
+Total cost  = Effort × Labour rate    = 53.5484 × 8,000 = $428,387.10</div>
+    <p>The official answer does <strong>not</strong> round to $13 the way the Chapter 26 slide does. Keep the decimals in your working, as here.</p></div></details>
+  <details class="prob"><summary><span class="q"><span class="tag">Ex 2 · 4 marks</span>A semidetached project with 200,000 LOC. Find (1) effort, (2) development time, (3) average staff size, (4) productivity.</span><span class="reveal">Show solution</span></summary>
+    <div class="sol"><div class="formula">KLOC = 200,000 ÷ 1,000 = 200          ← convert to KLOC first!
+1) E = a(KLOC)^b = 3.0 × 200^1.12     ≈ 1,133.12 person-months
+2) D = c(E)^d    = 2.5 × 1133.12^0.35 ≈ 29.30 months
+3) Staff = E ÷ D = 1133.12 ÷ 29.30    ≈ 38.67 → about 39 people
+4) Productivity = LOC ÷ E = 200,000 ÷ 1133.12 ≈ 176.50 LOC/pm (0.1765 KLOC/pm)</div>
+    <p>To compute 200<sup>1.12</sup> on a calculator, use the x<sup>y</sup> (or ^) key: 200 ^ 1.12 ≈ 377.7, then × 3.0. You can check it with the calculator in the COCOMO section by entering 200 KLOC, semi-detached.</p></div></details>
+</section>
+
+<section id="calc">
+  <div class="sec-head"><h2>Effort, cost per unit, total cost</h2><span class="src">Revision sheet · Ch 26/33 · Lect 1</span></div>
+  <p>The sheet asks for <mark>(a) effort, (b) cost per LOC or per FP, (c) total project cost</mark>. You only need three formulas, and they work the same way for LOC and FP:</p>
+  <div class="formula">(a) Effort (person-months) = Size ÷ Productivity
+(b) Cost per unit        = Labour rate ÷ Productivity
+(c) Total cost           = Effort × Labour rate   (= Size × Cost per unit)</div>
+  <p>Size is in LOC (or KLOC) or in FP. Productivity is LOC/pm or FP/pm. The labour rate is $ per person-month ("burdened" means it already includes overhead).</p>
+
+  <details class="prob"><summary><span class="q"><span class="tag">Sheet example</span>Size = 36,000 LOC; productivity = 600 LOC/pm; burdened labour rate = $9,000/pm. Find (a) effort, (b) cost per LOC, (c) total cost.</span><span class="reveal">Show solution</span></summary>
+    <div class="sol"><div class="formula">(a) 36,000 ÷ 600   = 60 person-months
+(b) $9,000 ÷ 600   = $15 per LOC
+(c) 60 × $9,000    = $540,000   (check: 36,000 × $15 = $540,000)</div></div></details>
+
+  <details class="prob"><summary><span class="q"><span class="tag">Ch 26 · LOC</span>CAD application estimated at 33,200 LOC. Productivity 620 LOC/pm, labour rate $8,000/pm.</span><span class="reveal">Show solution</span></summary>
+    <div class="sol"><div class="formula">Effort      = 33,200 ÷ 620 = 53.5 ≈ 54 person-months
+Cost/LOC    = 8,000 ÷ 620  = $12.90 ≈ $13
+Total cost  = 33,200 × $13 ≈ $431,000</div>
+    <p>The slide rounds cost per LOC to $13 before multiplying, which gives $431K. Without rounding it is 53.5 × $8,000 = $428,387. Either is fine if you show your working. (The Ch 26 slide text says "33,200 × 620", which is a typo; it should be × $13.)</p></div></details>
+
+  <details class="prob"><summary><span class="q"><span class="tag">Ch 26 · FP</span>Same project estimated at 375 FP. Productivity 6.5 FP/pm, labour rate $8,000/pm.</span><span class="reveal">Show solution</span></summary>
+    <div class="sol"><div class="formula">Effort      = 375 ÷ 6.5     = 57.7 ≈ 58 person-months
+Cost/FP     = 8,000 ÷ 6.5   = $1,230.77 ≈ $1,230
+Total cost  = 375 × $1,230.77 ≈ $461,000</div></div></details>
+
+  <details class="prob"><summary><span class="q"><span class="tag">Ch 26 · Use-cases</span>Use-case estimate gives 42,568 LOC. Productivity 620 LOC/pm, $8,000/pm.</span><span class="reveal">Show solution</span></summary>
+    <div class="sol"><div class="formula">Effort = 42,568 ÷ 620 = 68.7 ≈ 68 person-months (slide)
+Cost   = 42,568 × $13 ≈ $552,000</div></div></details>
+
+  <div class="calc" id="calc-tool">
+    <h3>Check your own answers</h3>
+    <div class="fields">
+      <label for="c-unit">Size unit<select id="c-unit"><option value="LOC">LOC</option><option value="FP">FP</option></select></label>
+      <label for="c-size">Size<input id="c-size" type="number" min="0" step="any" value="36000"></label>
+      <label for="c-prod">Productivity (per person-month)<input id="c-prod" type="number" min="0" step="any" value="600"></label>
+      <label for="c-rate">Labour rate ($ per person-month)<input id="c-rate" type="number" min="0" step="any" value="9000"></label>
+    </div>
+    <div class="out">
+      <div><small>(a) Effort</small><b id="o-eff">–</b></div>
+      <div><small id="o-unit-l">(b) Cost per LOC</small><b id="o-cpu">–</b></div>
+      <div><small>(c) Total cost</small><b id="o-tot">–</b></div>
+    </div>
+    <p class="src" style="margin-bottom:0">Loaded with the revision sheet example.</p>
+  </div>
+</section>
+
+<section id="pm">
+  <div class="sec-head"><h2>Why project management is important</h2><span class="src">Lect 1 · Ch 31</span></div>
+  <ul>
+    <li>It helps a company get the most organization and production for its money, and finish work on time as cheaply as possible.</li>
+    <li>It is the application of skills and knowledge that lets a company stay competitive in its market.</li>
+    <li>It has <strong>five categories: initiation, planning, execution, controlling, closing</strong>.</li>
+    <li>The project manager runs every aspect (scheduling, innovation, reaching the completion date), develops the strategy to organize and lead people and meet deadlines, and handles problems so executives can focus elsewhere.</li>
+  </ul>
+  <h3>The four P's (Ch 31)</h3>
+  <ul>
+    <li><strong>People</strong>: the most important element of a successful project</li>
+    <li><strong>Product</strong>: the software to be built</li>
+    <li><strong>Process</strong>: the framework activities and tasks to get the job done</li>
+    <li><strong>Project</strong>: all the work required to make the product a reality</li>
+  </ul>
+  <div class="two">
+    <div><h3>Stakeholders</h3><ul><li>Senior managers (business issues)</li><li>Project (technical) managers</li><li>Practitioners (technical skills)</li><li>Customers (specify requirements)</li><li>End-users (use the released software)</li></ul></div>
+    <div><h3>Team leader: MOI model</h3><ul><li><strong>M</strong>otivation: encourage people to do their best</li><li><strong>O</strong>rganization: mold or invent processes to turn the concept into a product</li><li><strong>I</strong>deas / innovation: help people feel creative within the product's bounds</li></ul></div>
+  </div>
+  <h3>SCM process tasks (Lect 1)</h3>
+  <p>Identification of objects · Version control · Change control · Configuration audit · Status reporting.</p>
+</section>
+
+<section id="sdlc">
+  <div class="sec-head"><h2>SDLC (Software Development Life Cycle)</h2><span class="src">Lect 1</span></div>
+  <h3>Why organizations use it</h3>
+  <ol>
+    <li>A structured, organized approach to development</li>
+    <li>High-quality software (testing and QA phases)</li>
+    <li>Managing risks and costs early</li>
+    <li>Better communication and collaboration with all stakeholders</li>
+    <li>Better efficiency and productivity</li>
+    <li>A higher chance of a successful project</li>
+  </ol>
+  <h3>The six phases, in order</h3>
+  <ol>
+    <li><strong>Requirements gathering and analysis</strong>: collect requirements from customers, end-users and business analysts.</li>
+    <li><strong>Design</strong>: architecture, data structures, interfaces. <em>HLD</em> (high-level design) gives the architecture; <em>LLD</em> (low-level design) describes how each feature and component works.</li>
+    <li><strong>Implementation / coding</strong> ("development"): the <em>longest phase</em>. Front end + middleware (connects front and back) + back end (database).</li>
+    <li><strong>Testing</strong>: confirm it meets requirements and works correctly.</li>
+    <li><strong>Deployment</strong>: release to production for end-users.</li>
+    <li><strong>Maintenance</strong>: ongoing support, bug fixes, updates.</li>
+  </ol>
+  <p>Methodologies that implement the SDLC: Waterfall, Agile, Scrum, V-Model, DevOps.</p>
+</section>
+
+<section id="loc">
+  <div class="sec-head"><h2>Lines of Code (LOC)</h2><span class="src">Lect 1 · Ch 32</span></div>
+  <p><strong>Definition:</strong> a line of code is any line that is <strong>not a comment or blank line</strong>, including header lines, however many statements are on it. It includes variable declarations and executable and non-executable statements. Because LOC only counts volume, use it only to compare projects in the <strong>same language with the same coding standards</strong>.</p>
+  <div class="two">
+    <div><h3>Features</h3><ul><li>Change tracking (growth or shrinkage over time)</li><li>Limited representation of complexity</li><li>Easy to compute</li><li>Easy to understand, even for non-technical people</li></ul>
+    <h3>Advantages</h3><ul><li>Effort estimation (high level)</li><li>Comparative analysis between projects or teams</li><li>Benchmarking between versions of the same program</li></ul></div>
+    <div><h3>Disadvantages</h3><ul><li>Poor fit for Agile, where requirements change</li><li>Ignores external libraries and frameworks</li><li>Larger codebases need more maintenance</li><li>Language-dependent; penalizes short, well-written code</li><li>Can't be known accurately until the code is written</li></ul>
+    <p>Research shows a rough correlation between LOC and cost, duration and number of defects, so lower LOC is usually better.</p></div>
+  </div>
+  <details class="prob"><summary><span class="q"><span class="tag">Lect 1</span>The <code>selSort</code> function is 13 lines in total, one of which is a comment. How many LOC?</span><span class="reveal">Show solution</span></summary>
+    <div class="sol"><p>Ignore comments and blank lines: 13 − 1 = <span class="ans">12 LOC</span>. In the second example (<code>main</code> with two comment lines): 11 − 2 = <span class="ans">9 LOC</span>.</p></div></details>
+  <h3>Size-oriented metrics (Ch 32)</h3>
+  <p>Errors per KLOC · defects per KLOC · $ per LOC · pages of documentation per KLOC · errors per person-month · errors per review hour · LOC per person-month · $ per page of documentation.</p>
+</section>
+
+<section id="fp">
+  <div class="sec-head"><h2>Function Point (FP) analysis</h2><span class="src">Lect 1 · Ch 26/32</span></div>
+  <p>FPA measures software <strong>size and complexity from its functionality, from the user's point of view</strong>. It was developed by <strong>Allan J. Albrecht at IBM in 1979</strong> and later refined by <strong>IFPUG (1984)</strong>. It is language- and technology-independent and is mainly used for business systems and MIS.</p>
+
+  <h3>The five information domain values, and their weights</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Parameter</th><th>Example</th><th>Type</th><th class="num">Simple</th><th class="num">Average</th><th class="num">Complex</th></tr></thead>
+    <tbody>
+      <tr><td>External Inputs (EI)</td><td>Input screens, tables</td><td>Transactional</td><td class="num">3</td><td class="num">4</td><td class="num">6</td></tr>
+      <tr><td>External Outputs (EO)</td><td>Output screens, reports</td><td>Transactional</td><td class="num">4</td><td class="num">5</td><td class="num">7</td></tr>
+      <tr><td>External Inquiries (EQ)</td><td>Prompts, interrupts</td><td>Transactional</td><td class="num">3</td><td class="num">4</td><td class="num">6</td></tr>
+      <tr><td>Internal Logical Files (ILF)</td><td>Databases, directories</td><td>Data</td><td class="num">7</td><td class="num">10</td><td class="num">15</td></tr>
+      <tr><td>External Interface Files (EIF)</td><td>Shared databases, routines</td><td>Data</td><td class="num">5</td><td class="num">7</td><td class="num">10</td></tr>
+    </tbody></table></div>
+  <p>A trick to memorize the <strong>average</strong> column: <strong>4 · 5 · 4 · 10 · 7</strong> (I · O · E · F · N). These are the weights used in almost every exercise.</p>
+
+  <h3>The formula</h3>
+  <div class="formula">UFP (count-total) = Σ (count × weight)
+CAF (= VAF = TCF) = 0.65 + 0.01 × Σ Fi
+FP  = UFP × CAF</div>
+  <ul>
+    <li>Σ Fi is the sum of <strong>14</strong> general system characteristics (GSCs), each rated <strong>0 to 5</strong> (0 = not applicable, 5 = essential).</li>
+    <li>So Σ Fi ranges <strong>0 to 70</strong> and CAF ranges <strong>0.65 to 1.35</strong>.</li>
+    <li>Your files use three names for the same factor: CAF, VAF and TCF. The total-degree-of-influence version is VAF = TDI × 0.01 + 0.65.</li>
+    <li>When the count is given as Optimistic / Realistic / Pessimistic: <span style="font-family:var(--f-mono)">estimated count = (O + 4R + P) ÷ 6</span>, then multiply by the weight.</li>
+  </ul>
+
+  <details class="prob"><summary><span class="q"><span class="tag">GATE 2015</span>I = 30, O = 60, E = 23, F = 8, N = 2; weights 4, 5, 4, 10, 7. Of the 14 adjustment factors, 4 are not applicable, 4 have value 3 and the rest have value 4. Find FP.</span><span class="reveal">Show solution</span></summary>
+    <div class="sol"><div class="formula">UFP  = 30×4 + 60×5 + 23×4 + 8×10 + 2×7 = 120+300+92+80+14 = 606
+Σ Fi = 4×0 + 4×3 + 6×4 = 36
+CAF  = 0.65 + 0.36 = 1.01
+FP   = 606 × 1.01 = 612.06</div><p class="ans">Answer (A) 612.06</p></div></details>
+
+  <details class="prob"><summary><span class="q"><span class="tag">Lect 1 · Ex 1</span>O/R/P counts: Inputs 18/22/28, Outputs 14/17/24, Inquiries 14/20/26, Files 6/6/7, Interfaces 4/4/5. Weights 4, 5, 4, 10, 7; Σ Fi = 50; productivity 7 FP/month; labour $4,000/month. Find FP, cost/FP, total cost, effort.</span><span class="reveal">Show solution</span></summary>
+    <div class="sol"><div class="formula">Inputs     (18 + 4×22 + 28)/6 = 22.33 × 4  = 89.33
+Outputs    (14 + 4×17 + 24)/6 = 17.67 × 5  = 88.33
+Inquiries  (14 + 4×20 + 26)/6 = 20.00 × 4  = 80.00
+Files      ( 6 + 4×6  +  7)/6 =  6.17 × 10 = 61.67
+Interfaces ( 4 + 4×4  +  5)/6 =  4.17 × 7  = 29.17
+UFC = 348.5 ≈ 349
+TCF = 0.65 + 0.01×50 = 1.15
+FP  = 349 × 1.15 = 401.35
+Cost/FP = 4,000 ÷ 7 = $571.43
+Total   ≈ 571 × 401 = $228,971
+Effort  = 401.35 ÷ 7 ≈ 57.3 person-months</div>
+    <p>The slide stops before working out effort; 57.3 pm is that last step. Using 348.5 without rounding gives FP = 400.78.</p></div></details>
+
+  <details class="prob"><summary><span class="q"><span class="tag">Lect 1 · Ex 2</span>O/R/P counts: Inputs 20/24/30, Outputs 12/15/28, Inquiries 16/22/28, Files 4/4/5, Interfaces 2/2/3. Weights 4, 5, 4, 10, 7; Σ Fi = 52; productivity 6.5 FP/month; labour $8,000/month.</span><span class="reveal">Show solution</span></summary>
+    <div class="sol"><div class="formula">Inputs     (20 + 96 + 30)/6 = 24.33 × 4  = 97.33
+Outputs    (12 + 60 + 28)/6 = 16.67 × 5  = 83.33
+Inquiries  (16 + 88 + 28)/6 = 22.00 × 4  = 88.00
+Files      ( 4 + 16 +  5)/6 =  4.17 × 10 = 41.67
+Interfaces ( 2 +  8 +  3)/6 =  2.17 × 7  = 15.17
+UFC = 325.5
+TCF = 0.65 + 0.52 = 1.17
+FP  = 325.5 × 1.17 = 380.8
+Cost/FP = 8,000 ÷ 6.5 = $1,230.77
+Total   = 380.8 × 1,230.77 ≈ $468,720
+Effort  = 380.8 ÷ 6.5 ≈ 58.6 person-months</div>
+    <p>Your file has no solution for this one, so these are my workings using the same method as Exercise 1.</p></div></details>
+
+  <h3>Backfiring (FP → LOC)</h3>
+  <p>LOC = FP × (SLOC per FP for the language). LOC and FP can be converted into each other. Table from Lect 1: C++ 64 · COBOL 106 · Delphi 18 · HTML 14 · VB 6.0 32 · SQL 12 · Java 46. Another file gives about 100 lines of COBOL per FP, and Ch 32 has a longer QSM table (Java avg 63, C++ 66). Use whatever table the question gives.</p>
+  <details class="prob"><summary><span class="q"><span class="tag">Lect 1 · Ex 3</span>25 inputs, 15 outputs, 10 inquiries, 20 files, 5 interfaces, all average complexity. Σ Fi = 50. Find FP and LOC in Java.</span><span class="reveal">Show solution</span></summary>
+    <div class="sol"><div class="formula">UFC = 25×4 + 15×5 + 10×4 + 20×10 + 5×7 = 100+75+40+200+35 = 450
+TCF = 0.65 + 0.50 = 1.15
+FP  = 450 × 1.15 = 517.5
+LOC = 517.5 × 46 = 23,805</div></div></details>
+
+  <div class="two">
+    <div><h3>Benefits</h3><ul><li>Technology independent</li><li>More accurate project estimation</li><li>A common language for business and technical people</li><li>Better-informed decisions</li><li>Early detection of scope changes</li></ul>
+    <h3>Objectives</h3><ul><li>Estimation of work, time, materials</li><li>Support for project management</li><li>Comparative analysis and benchmarking</li><li>Better cost–benefit analysis</li><li>Alignment with business objectives</li></ul></div>
+    <div><h3>Disadvantages</h3><ul><li>Subjective judgement</li><li>Low accuracy (because it's subjective)</li><li>Time consuming</li><li>Steep learning curve</li><li>Less research data than LOC</li><li>Costly</li></ul>
+    <h3>Metrics derived from FP</h3><p>Errors/FP · $/FP · defects/FP · pages of documentation/FP · productivity = FP/PM.</p></div>
+  </div>
+  <details class="prob"><summary><span class="q"><span class="tag">MCQ</span>LOC and FP are used to measure the ___ of software. And how many complexity adjustment factors are there in FPA?</span><span class="reveal">Show answers</span></summary>
+    <div class="sol"><p><span class="ans">Size of software</span> (UGC-NET 2013) and <span class="ans">14</span> (UGC-NET 2014).</p></div></details>
+</section>
+
+<section id="est">
+  <div class="sec-head"><h2>Cost and software estimation</h2><span class="src">Ch 26 / Ch 33 (same slides)</span></div>
+  <p><strong>Goal of project planning:</strong> establish a pragmatic strategy for controlling, tracking and monitoring a complex technical project, so the result gets done on time and with quality.</p>
+  <div class="two">
+    <div><h3>Planning task set I</h3><ul><li>Establish project scope</li><li>Determine feasibility</li><li>Analyze risks</li><li>Define required resources (human, reusable software, environmental)</li></ul></div>
+    <div><h3>Planning task set II</h3><ul><li>Estimate cost and effort: decompose the problem, make two or more estimates (size, FP, process tasks or use-cases), reconcile them</li><li>Develop a project schedule</li></ul></div>
+  </div>
+  <h3>Estimation requires</h3>
+  <p>Experience · access to good historical information (metrics) · the courage to commit to quantitative predictions when only qualitative information exists. Estimation carries inherent risk, and that risk leads to uncertainty.</p>
+  <h3>Rules for project estimation</h3>
+  <ul><li>Scope must be understood</li><li>Elaboration (decomposition) is necessary</li><li>Historical metrics are very helpful</li><li>Use at least two different techniques</li><li>Uncertainty is inherent</li></ul>
+  <h3>Estimation techniques</h3>
+  <ul><li>Past (similar) project experience</li><li>Conventional: task breakdown and effort estimates; size (FP) estimates</li><li>Empirical models (for example COCOMO)</li><li>Automated tools</li></ul>
+  <h3>Estimation accuracy depends on</h3>
+  <ul><li>How well the planner estimated the size of the product</li><li>The ability to translate size into effort, calendar time and dollars (needs reliable metrics from past projects)</li><li>How well the plan reflects the team's abilities</li><li>The stability of requirements and of the environment</li></ul>
+  <h3>Estimation methods in your slides</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Method</th><th>How it works</th><th>Ch 26 example</th></tr></thead>
+    <tbody>
+      <tr><td>LOC-based</td><td>Estimate LOC per function, then divide by historical LOC/pm</td><td>33,200 LOC → 54 pm, $431K</td></tr>
+      <tr><td>FP-based</td><td>FP = count-total × [0.65 + 0.01 Σ Fi], then divide by FP/pm</td><td>375 FP → 58 pm, $461K</td></tr>
+      <tr><td>Process-based</td><td>Estimate effort for each framework activity of each function, then sum</td><td>46 pm, $368K</td></tr>
+      <tr><td>Use-case based</td><td>Use-cases → LOC per subsystem, then productivity</td><td>42,568 LOC → 68 pm, $552K</td></tr>
+      <tr><td>Empirical model</td><td>effort = tuning coefficient × size<sup>exponent</sup></td><td>COCOMO II</td></tr>
+      <tr><td>Software equation</td><td>E = [LOC × B<sup>0.333</sup> ÷ P]<sup>3</sup> × (1 ÷ t<sup>4</sup>)</td><td>B = special skills factor, P = productivity parameter, t = duration</td></tr>
+    </tbody></table></div>
+  <div class="two">
+    <div><h3>OO projects</h3><p>Count use-cases and key classes. Support classes = key classes × interface multiplier (no GUI 2.0, text UI 2.25, GUI 2.5, complex GUI 3.0). Effort = total classes × 15–20 person-days per class (Lorenz and Kidd).</p></div>
+    <div><h3>Agile projects</h3><p>Estimate each user scenario separately: break it into tasks and estimate each one (or estimate its volume in LOC/FP). Sum the tasks for the scenario, then sum the scenarios for the increment.</p></div>
+  </div>
+
+  <h3>Make–buy decision (expected cost)</h3>
+  <div class="formula">Expected cost = Σ (path probability × estimated path cost)</div>
+  <details class="prob"><summary><span class="q"><span class="tag">Ch 26/33</span>System X decision tree. Build: simple 0.3 → $380K, difficult 0.7 → $450K. Reuse: minor 0.4 → $275K; major 0.6 → (simple 0.2 → $310K, complex 0.8 → $490K). Buy: minor 0.7 → $210K, major 0.3 → $400K. Contract: without changes 0.6 → $350K, with changes 0.4 → $500K.</span><span class="reveal">Show solution</span></summary>
+    <div class="sol"><div class="formula">Build    = 0.3(380) + 0.7(450)                 = $429K
+Reuse    = 0.4(275) + 0.6[0.2(310) + 0.8(490)] = $382K
+Buy      = 0.7(210) + 0.3(400)                 = $267K  ← lowest
+Contract = 0.6(350) + 0.4(500)                 = $410K</div><p><span class="ans">Buy</span> (off-the-shelf) has the lowest expected cost.</p></div></details>
+
+  <h3>Feasibility (Ch 33)</h3>
+  <ul>
+    <li><strong>Technical:</strong> hardware cost (system units, monitors, printers…) plus software cost (OS, server, front end, back end).</li>
+    <li><strong>Operational:</strong> the cost of running the system at all sites (terminals, network cabling, operator salaries, backup).</li>
+    <li><strong>Schedule:</strong> scheduled time vs activities, shown with a <strong>Gantt chart</strong> (horizontal bars over time, shows overlap) or a <strong>PERT chart</strong> (Program Evaluation and Review Technique, also shows dependencies between activities).</li>
+  </ul>
+  <p><strong>Cost–benefit analysis sheet:</strong> placed at the end of the proposal to show stakeholders that the tangible benefits will recover the investment cost.</p>
+</section>
+
+<section id="cocomo">
+  <div class="sec-head"><h2>COCOMO I and COCOMO II</h2><span class="src">COCOMO II: your docx · COCOMO I: past exam and Boehm 1981</span></div>
+
+  <h3>COCOMO I (Basic): the calculation on the revision sheet</h3>
+  <p>COCOMO (COnstructive COst MOdel) was published by Barry Boehm in 1981. It estimates effort from size in <strong>KLOC</strong> using one of three project modes.</p>
+  <div class="formula">Effort  E = a × (KLOC)^b          person-months
+Time    D = c × (E)^d             months
+Staff   P = E ÷ D                 people
+Productivity = KLOC ÷ E</div>
+  <div class="tbl"><table>
+    <thead><tr><th>Mode</th><th>When</th><th class="num">a</th><th class="num">b</th><th class="num">c</th><th class="num">d</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Organic</strong></td><td>Small, experienced team, familiar problem (about 2–50 KLOC)</td><td class="num">2.4</td><td class="num">1.05</td><td class="num">2.5</td><td class="num">0.38</td></tr>
+      <tr><td><strong>Semi-detached</strong></td><td>Medium size, mixed experience (about 50–300 KLOC)</td><td class="num">3.0</td><td class="num">1.12</td><td class="num">2.5</td><td class="num">0.35</td></tr>
+      <tr><td><strong>Embedded</strong></td><td>Tight hardware or real-time constraints (more than 300 KLOC)</td><td class="num">3.6</td><td class="num">1.20</td><td class="num">2.5</td><td class="num">0.32</td></tr>
+    </tbody></table></div>
+  <p><strong>Intermediate COCOMO</strong> multiplies by an Effort Adjustment Factor from 15 cost drivers: E = a × KLOC<sup>b</sup> × EAF, with a = 3.2 / 3.0 / 2.8 and the same b values. <strong>Detailed COCOMO</strong> applies the cost drivers to each phase.</p>
+  <details class="prob"><summary><span class="q"><span class="tag">Practice</span>A 32 KLOC organic project. Find effort, development time and average staff.</span><span class="reveal">Show solution</span></summary>
+    <div class="sol"><div class="formula">E = 2.4 × 32^1.05  = 2.4 × 38.05 ≈ 91.3 person-months
+D = 2.5 × 91.3^0.38 ≈ 13.9 months
+P = 91.3 ÷ 13.9    ≈ 6.6 ≈ 7 people</div>
+    <p>The same 32 KLOC as semi-detached: E ≈ 145.5 pm, D ≈ 14.3 months. As embedded: E ≈ 230.4 pm, D ≈ 14.3 months.</p></div></details>
+
+  <div class="calc">
+    <h3>COCOMO I (Basic) calculator</h3>
+    <div class="fields">
+      <label for="k-size">Size (KLOC)<input id="k-size" type="number" min="0" step="any" value="32"></label>
+      <label for="k-mode">Mode<select id="k-mode"><option value="org">Organic</option><option value="semi">Semi-detached</option><option value="emb">Embedded</option></select></label>
+    </div>
+    <div class="out">
+      <div><small>Effort E</small><b id="k-e">–</b></div>
+      <div><small>Duration D</small><b id="k-d">–</b></div>
+      <div><small>Staff E ÷ D</small><b id="k-p">–</b></div>
+    </div>
+  </div>
+
+  <h3>COCOMO II: Application Composition model (stage 1)</h3>
+  <p>COCOMO II is a <strong>hierarchy of three models</strong>:</p>
+  <ul>
+    <li><strong>Application composition:</strong> early stages, when prototyping user interfaces, considering software and system interaction, assessing performance and evaluating technology maturity matter most.</li>
+    <li><strong>Early design stage:</strong> once requirements are stable and the basic architecture is in place.</li>
+    <li><strong>Post-architecture stage:</strong> during construction of the software.</li>
+  </ul>
+  <p>Application composition sizes the system in <strong>object points</strong>: screens, reports and 3GL components.</p>
+  <ol>
+    <li>Count the screens, reports and 3GL components.</li>
+    <li>Classify each one as simple, medium or difficult (tables below).</li>
+    <li>Give each one a weight.</li>
+    <li>Object points = Σ (instances × weight).</li>
+    <li>NOP = object points × (100 − %reuse) ÷ 100.</li>
+    <li>Look up PROD from developer experience.</li>
+    <li>Effort = NOP ÷ PROD (person-months).</li>
+  </ol>
+  <div class="two">
+    <div><div class="tbl"><table><caption style="text-align:left;font-weight:700;padding-bottom:4px">Screens (views × data tables)</caption>
+      <thead><tr><th>Views</th><th>&lt;4 tables</th><th>&lt;8</th><th>8+</th></tr></thead>
+      <tbody><tr><td>&lt;3</td><td>S</td><td>S</td><td>M</td></tr><tr><td>3–7</td><td>S</td><td>M</td><td>D</td></tr><tr><td>&gt;8</td><td>M</td><td>D</td><td>D</td></tr></tbody></table></div></div>
+    <div><div class="tbl"><table><caption style="text-align:left;font-weight:700;padding-bottom:4px">Reports (sections × data tables)</caption>
+      <thead><tr><th>Sections</th><th>&lt;4 tables</th><th>&lt;8</th><th>8+</th></tr></thead>
+      <tbody><tr><td>0–1</td><td>S</td><td>S</td><td>M</td></tr><tr><td>2–3</td><td>S</td><td>M</td><td>D</td></tr><tr><td>4+</td><td>M</td><td>D</td><td>D</td></tr></tbody></table></div></div>
+  </div>
+  <p style="font-size:15px;color:var(--muted)">Table columns: &lt;4 = fewer than 2 servers and 3 clients; &lt;8 = 2–3 servers and 3–5 clients; 8+ = more than 3 servers and 5 clients.</p>
+  <div class="two">
+    <div><div class="tbl"><table><thead><tr><th>Weight</th><th class="num">Simple</th><th class="num">Medium</th><th class="num">Difficult</th></tr></thead>
+      <tbody><tr><td>Screen</td><td class="num">1</td><td class="num">2</td><td class="num">3</td></tr><tr><td>Report</td><td class="num">2</td><td class="num">5</td><td class="num">8</td></tr><tr><td>3GL component</td><td class="num">–</td><td class="num">–</td><td class="num">10</td></tr></tbody></table></div></div>
+    <div><div class="tbl"><table><thead><tr><th>Developer experience</th><th class="num">PROD</th></tr></thead>
+      <tbody><tr><td>Very low</td><td class="num">4</td></tr><tr><td>Low</td><td class="num">7</td></tr><tr><td>Nominal</td><td class="num">13</td></tr><tr><td>High</td><td class="num">25</td></tr><tr><td>Very high</td><td class="num">50</td></tr></tbody></table></div></div>
+  </div>
+  <details class="prob"><summary><span class="q"><span class="tag">Your docx</span>4 screens (4 views, 7 tables, 3 servers, 4 clients); 2 reports (6 sections, 7 tables, 2 servers, 3 clients); 10% reuse; low experience.</span><span class="reveal">Show solution</span></summary>
+    <div class="sol"><div class="formula">Screens: 4 views, &lt;8 tables → Medium → weight 2
+Reports: 6 sections, &lt;8 tables → Difficult → weight 8
+Object points = 4×2 + 2×8 = 24
+NOP    = 24 × (100 − 10) ÷ 100 = 21.6
+PROD   = 7 (low)
+Effort = 21.6 ÷ 7 = 3.086 person-months</div></div></details>
+
+  <h3 id="cocomo-cmp">COCOMO I vs COCOMO II</h3>
+  <p>The first three rows are the ones the professor used in the previous exam's answer key (marked ★), so learn those first. The rest are from the comparison table you added, for questions that ask for more differences.</p>
+  <div class="tbl"><table>
+    <thead><tr><th style="width:28px"></th><th>COCOMO I</th><th>COCOMO II</th></tr></thead>
+    <tbody>
+      <tr><td>★</td><td>Useful in the <strong>waterfall</strong> models of the software development cycle.</td><td>Useful in <strong>non-sequential, rapid development and reuse</strong> models of software.</td></tr>
+      <tr><td>★</td><td>Provides estimates of <strong>effort and schedule</strong>.</td><td>Provides estimates that represent <strong>one standard deviation</strong> around the most likely estimate.</td></tr>
+      <tr><td>★</td><td>Based on the <strong>linear</strong> reuse formula.</td><td>Based on the <strong>non-linear</strong> reuse formula.</td></tr>
+      <tr><td>4</td><td>Based on the assumption of <strong>reasonably stable requirements</strong>.</td><td>Based on a <strong>reuse model</strong> that looks at the effort needed to understand and estimate.</td></tr>
+      <tr><td>5</td><td>Effort equation's exponent is determined by <strong>3 development modes</strong> (organic, semi-detached, embedded).</td><td>Effort equation's exponent is determined by <strong>5 scale factors</strong>.</td></tr>
+      <tr><td>6</td><td>Development begins with the <strong>requirements assigned</strong> to the software.</td><td>Follows a <strong>spiral</strong> type of development.</td></tr>
+      <tr><td>7</td><td><strong>3 submodels</strong> and <strong>15 cost drivers</strong>.</td><td><strong>4 submodels</strong> and <strong>17 cost drivers</strong>.</td></tr>
+      <tr><td>8</td><td>Size stated in <strong>lines of code</strong>.</td><td>Size stated in <strong>object points, function points and lines of code</strong>.</td></tr>
+    </tbody></table></div>
+  <p style="font-size:15px;color:var(--muted)">Number-heavy rows to memorize: 3 vs 4 submodels, 15 vs 17 cost drivers, 3 modes vs 5 scale factors. Your Chapter 26 slide lists three COCOMO II stage models (application composition, early design, post-architecture). If a question asks you to <em>name</em> the COCOMO II models, give those three; use "4 submodels" only for this comparison.</p>
+</section>
+
+<section id="dre">
+  <div class="sec-head"><h2>Defect Removal Efficiency (DRE)</h2><span class="src">Exercise docx · Ch 32</span></div>
+  <div class="formula">DRE = E ÷ (E + D)
+E = errors found BEFORE delivery to the end-user
+D = defects found AFTER delivery</div>
+  <p>A higher DRE is better; the ideal is 1 (100%). DRE is a quality-related process metric.</p>
+  <details class="prob"><summary><span class="q"><span class="tag">Ex 1</span>180 errors before delivery, 20 defects after. Find DRE.</span><span class="reveal">Show solution</span></summary>
+    <div class="sol"><div class="formula">DRE = 180 ÷ (180 + 20) = 180 ÷ 200 = 0.90 = 90%</div><p>90% of defects were removed before delivery.</p></div></details>
+  <details class="prob"><summary><span class="q"><span class="tag">Ex 2</span>240 errors found in testing, 60 defects found by customers.</span><span class="reveal">Show solution</span></summary>
+    <div class="sol"><div class="formula">DRE = 240 ÷ 300 = 0.80 = 80%   (20% escaped to the customer)</div></div></details>
+  <details class="prob"><summary><span class="q"><span class="tag">Ex 3 · reverse</span>DRE = 95%, E = 380. How many defects were found after delivery?</span><span class="reveal">Show solution</span></summary>
+    <div class="sol"><div class="formula">0.95 = 380 ÷ (380 + D)
+0.95(380 + D) = 380
+361 + 0.95D   = 380
+D = 19 ÷ 0.95 = 20 defects</div><p>Shortcut: D = E × (1 − DRE) ÷ DRE = 380 × 0.05 ÷ 0.95 = 20.</p></div></details>
+  <details class="prob"><summary><span class="q"><span class="tag">Practice · reverse</span>DRE = 0.85 and 30 defects were reported after release. How many errors were found before release?</span><span class="reveal">Show solution</span></summary>
+    <div class="sol"><div class="formula">E = DRE × D ÷ (1 − DRE) = 0.85 × 30 ÷ 0.15 = 170 errors
+Check: 170 ÷ (170 + 30) = 0.85 ✓</div></div></details>
+</section>
+
+<section id="cmp">
+  <div class="sec-head"><h2>FP vs LOC</h2><span class="src">Lect 1 · Ch 32 · your comparison table</span></div>
+  <p>These four are the short, standard answer. Learn them first for a "compare FP and LOC" question, then add rows from the longer table below if more are asked.</p>
+  <div class="tbl"><table>
+    <thead><tr><th style="width:28px"></th><th>FP</th><th>LOC</th></tr></thead>
+    <tbody>
+      <tr><td>★</td><td>FP is <strong>specification-based</strong>.</td><td>LOC is <strong>analogy-based</strong>.</td></tr>
+      <tr><td>★</td><td>FP is <strong>language independent</strong>.</td><td>LOC is <strong>language dependent</strong>.</td></tr>
+      <tr><td>★</td><td>FP is <strong>user-oriented</strong>.</td><td>LOC is <strong>design-oriented</strong>.</td></tr>
+      <tr><td>★</td><td>It is <strong>extendible to LOC</strong>.</td><td>It is <strong>convertible to FP (backfiring)</strong>.</td></tr>
+    </tbody></table></div>
+  <p style="font-size:15px;color:var(--muted)">What the first and third rows mean: FP is counted from the requirements specification, from what the user sees. LOC is estimated by comparing with similar past code, and depends on how the program is designed and written.</p>
+  <h3>More differences</h3>
+  <div class="tbl"><table>
+    <thead><tr><th></th><th>LOC</th><th>FP</th></tr></thead>
+    <tbody>
+      <tr><td>What it measures</td><td>Volume of code</td><td>Functionality delivered to the user</td></tr>
+      <tr><td>Language dependence</td><td>Dependent; only compare same language and standards</td><td>Independent of language and technology</td></tr>
+      <tr><td>When available</td><td>Accurately, only after coding</td><td>Early, from requirements (countable characteristics)</td></tr>
+      <tr><td>Ease</td><td>Easy to count and understand</td><td>Subjective, time consuming, steep learning curve</td></tr>
+      <tr><td>Short or clever code</td><td>Penalizes it</td><td>Does not penalize it</td></tr>
+      <tr><td>Reuse</td><td>Ignores external libraries</td><td>Makes the effect of reusable components easier to measure</td></tr>
+      <tr><td>Complexity</td><td>Doesn't reflect it</td><td>Weights and the 14 GSCs reflect it</td></tr>
+      <tr><td>Research data</td><td>Plenty</td><td>Less</td></tr>
+      <tr><td>Best for</td><td>Comparing versions or teams on the same stack</td><td>Business and MIS systems, cross-language comparison</td></tr>
+      <tr><td>Typical metrics</td><td>Errors/KLOC, $/LOC, LOC/pm</td><td>Errors/FP, $/FP, FP/pm</td></tr>
+    </tbody></table></div>
+  <p>Both measure the <strong>size</strong> of software and can be converted into each other with <strong>backfiring</strong> (LOC = FP × SLOC/FP).</p>
+  <p><strong>Why use FP (Ch 32):</strong> it is independent of programming language; it uses readily countable characteristics determined early in the process; it does not "penalize" inventive (short) implementations; and it makes the impact of reusable components easier to measure.</p>
+</section>
+
+<section id="scope">
+  <div class="sec-head"><h2>Scope and software scope</h2><span class="src">Ch 26/33 · Ch 31</span></div>
+  <h3>Software scope describes</h3>
+  <ul>
+    <li>The <strong>functions and features</strong> delivered to end-users</li>
+    <li>The <strong>data</strong> that is input and output</li>
+    <li>The <strong>"content"</strong> presented to users as a result of using the software</li>
+    <li>The <strong>performance, constraints, interfaces and reliability</strong> that bound the system</li>
+  </ul>
+  <p><strong>Scope is defined with one of two techniques:</strong> (1) a narrative description written after communicating with all stakeholders, or (2) a set of use-cases developed by end-users.</p>
+  <div class="two">
+    <div><h3>To understand scope</h3><ul><li>Understand the customer's needs</li><li>Understand the business context</li><li>Understand the project boundaries</li><li>Understand the customer's motivation</li><li>Understand the likely paths for change</li><li>Even when you understand, nothing is guaranteed</li></ul></div>
+    <div><h3>Product scope (Ch 31)</h3><ul><li><strong>Context:</strong> how the software fits a larger system or business, and the constraints that follow</li><li><strong>Information objectives:</strong> which customer-visible data objects are input and output</li><li><strong>Function and performance:</strong> how input is transformed to output, and any special performance needs</li></ul><p>Scope must be unambiguous and understandable at both management and technical levels.</p></div>
+  </div>
+  <p><strong>Problem decomposition</strong> (partitioning, problem elaboration): once scope is defined, break it into functions, user-visible data objects or problem classes, and keep going until all are defined. Estimation depends on this step.</p>
+  <p><strong>Baseline plan / PSD (Project Scope Document)</strong> lists the objectives, requirements, boundaries, deliverables, resources and constraints. Its benefits: it uncovers the main functional requirements, keeps the project tracking in the right direction, removes misunderstandings, keeps a feedback loop between customer, analyst and developer, and makes it easy to trace the effect of scope changes.</p>
+</section>
+
+<section id="extra">
+  <div class="sec-head"><h2>Also in your files, not on the sheet</h2><span class="src">Ch 31 · Ch 32 · Metric docx</span></div>
+  <p>Lower priority, but they could appear in short-answer questions.</p>
+  <ul>
+    <li><strong>Team paradigms (Constantine):</strong> closed (hierarchy), random (individual initiative), open (control plus innovation), synchronous (compartmentalized, little communication). Agile teams are self-organizing.</li>
+    <li><strong>Team toxicity:</strong> frenzied atmosphere, high frustration, fragmented procedures, unclear roles, repeated failure.</li>
+    <li><strong>Why projects get into trouble:</strong> customer needs not understood, poorly defined scope, poorly managed change, technology changes, unrealistic deadlines, resistant users, lost sponsorship, missing skills.</li>
+    <li><strong>Boehm's W5HH:</strong> Why? What? When? Who? Where? How? How much?</li>
+    <li><strong>Metric:</strong> a quantitative measure of a characteristic of a system, process or project (for example defect density = defects ÷ KLOC). Process metrics are strategic; project metrics are tactical (inputs, outputs, results). Never use metrics to appraise or threaten individuals.</li>
+    <li><strong>Quality measures:</strong> correctness, maintainability, integrity, usability.</li>
+    <li><strong>CMMI:</strong> a process meta-model, either <em>continuous</em> (each process area improved separately) or <em>staged</em> (maturity levels). Each process area has specific goals (what to achieve) and specific practices (how).</li>
+    <li><strong>People CMM levels:</strong> Initial → Managed → Defined → Predictable → Optimized.</li>
+    <li><strong>SPI ROI</strong> = [Σ benefits − Σ costs] ÷ Σ costs × 100%. Other frameworks: SPICE (ISO/IEC 15504), Bootstrap, PSP/TSP, TickIT (ISO 9001).</li>
+  </ul>
+</section>
+</main>
+
+<footer class="wrap">Sources: your eight course files, the revision sheet and the previous 456 midterm with its answer key.</footer>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var fmt=function(n,d){return isFinite(n)?n.toLocaleString('en-US',{maximumFractionDigits:d,minimumFractionDigits:0}):'–'};
+  function calc(){
+    var s=parseFloat($('c-size').value),p=parseFloat($('c-prod').value),r=parseFloat($('c-rate').value),u=$('c-unit').value;
+    $('o-unit-l').textContent='(b) Cost per '+u;
+    if(!(s>0&&p>0&&r>=0)){$('o-eff').textContent=$('o-cpu').textContent=$('o-tot').textContent='–';return}
+    var e=s/p;
+    $('o-eff').textContent=fmt(e,2)+' pm';
+    $('o-cpu').textContent='$'+fmt(r/p,2);
+    $('o-tot').textContent='$'+fmt(e*r,0);
+  }
+  ['c-size','c-prod','c-rate','c-unit'].forEach(function(id){$(id).addEventListener('input',calc);$(id).addEventListener('change',calc)});
+  calc();
+  var M={org:[2.4,1.05,2.5,0.38],semi:[3.0,1.12,2.5,0.35],emb:[3.6,1.20,2.5,0.32]};
+  function coco(){
+    var k=parseFloat($('k-size').value),m=M[$('k-mode').value];
+    if(!(k>0)){$('k-e').textContent=$('k-d').textContent=$('k-p').textContent='–';return}
+    var E=m[0]*Math.pow(k,m[1]),D=m[2]*Math.pow(E,m[3]);
+    $('k-e').textContent=fmt(E,1)+' pm';$('k-d').textContent=fmt(D,1)+' mo';$('k-p').textContent=fmt(E/D,1);
+  }
+  ['k-size','k-mode'].forEach(function(id){$(id).addEventListener('input',coco);$(id).addEventListener('change',coco)});
+  coco();
+})();
+</script>
+
+</body></html>
